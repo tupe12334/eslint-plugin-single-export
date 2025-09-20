@@ -17,7 +17,7 @@
     "src"
   ],
   "scripts": {
-    "test": "vitest",
+    "test": "vitest --run",
     "test:watch": "vitest --watch",
     "lint": "eslint src",
     "lint:examples": "eslint src/rules/examples",
