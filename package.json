@@ -1,6 +1,7 @@
 {
   "name": "eslint-plugin-single-export",
   "version": "1.0.0",
+  "type": "module",
   "description": "ESLint plugin to enforce a single export per file",
   "keywords": [
     "eslint",
@@ -19,6 +20,7 @@
     "test": "vitest",
     "test:watch": "vitest --watch",
     "lint": "eslint src",
+    "lint:examples": "eslint src/rules/examples",
     "release": "release-it"
   },
   "devDependencies": {

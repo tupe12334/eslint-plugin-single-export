@@ -1,4 +1,4 @@
-import singleExport from './rules/single-export'
+import singleExport from './rules/single-export.js'
 
 const plugin = {
   meta: {
