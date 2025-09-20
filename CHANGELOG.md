@@ -1,5 +1,12 @@
 
 
+## [1.1.1](https://github.com/tupe12334/eslint-plugin-single-export/compare/v1.1.0...v1.1.1) (2025-09-20)
+
+
+### Bug Fixes
+
+* enhance export messages for clarity and guidance ([5ce58eb](https://github.com/tupe12334/eslint-plugin-single-export/commit/5ce58eb255f7fb9513ec6402c6c6964bd080a28a))
+
 # 1.1.0 (2025-09-20)
 
 
