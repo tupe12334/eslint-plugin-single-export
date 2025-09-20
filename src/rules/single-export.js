@@ -9,9 +9,9 @@ const rule = {
     fixable: undefined,
     schema: [],
     messages: {
-      multipleExports: 'Only one export is allowed per file. Found {{count}} exports.',
-      multipleDefaultExports: 'Multiple default exports are not allowed.',
-      mixedExports: 'Cannot mix default and named exports in the same file.'
+      multipleExports: 'Only one export is allowed per file. Found {{count}} exports. Split functionality across multiple files following domain boundaries.',
+      multipleDefaultExports: 'Multiple default exports are not allowed. Remove duplicate default exports and keep only one.',
+      mixedExports: 'Cannot mix default and named exports in the same file. Choose either default export or named exports consistently.'
     }
   },
   create(context) {
