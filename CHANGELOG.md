@@ -1,5 +1,12 @@
 
 
+## [1.1.2](https://github.com/tupe12334/eslint-plugin-single-export/compare/v1.1.1...v1.1.2) (2025-09-20)
+
+
+### Bug Fixes
+
+* refine export counting logic to exclude re-exports and enhance test cases ([f066968](https://github.com/tupe12334/eslint-plugin-single-export/commit/f066968b6a1e56e6a802a2a3e96dfa90e89d9a25))
+
 ## [1.1.1](https://github.com/tupe12334/eslint-plugin-single-export/compare/v1.1.0...v1.1.1) (2025-09-20)
 
 
