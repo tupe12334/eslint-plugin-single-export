@@ -29,6 +29,16 @@ describe('single-export rule', () => {
         'export { foo } from "./other"',
         'export * from "./other"',
 
+        // Multiple re-exports (should be allowed)
+        'export { foo, bar } from "./other"',
+        'export { foo } from "./module1"; export { bar } from "./module2"',
+        'export * from "./module1"; export * from "./module2"',
+        'export { a, b } from "./x"; export { c, d } from "./y"',
+
+        // Re-exports mixed with single local export (should be allowed)
+        'export * from "./other"; export const foo = 1',
+        'export { bar } from "./other"; export default function() {}',
+
         // CommonJS single export
         'module.exports = 42',
         'exports.foo = 42',
@@ -68,9 +78,9 @@ describe('single-export rule', () => {
           errors: [{ messageId: 'multipleExports' }]
         },
 
-        // Export all with other exports
+        // Multiple local exports (should be invalid)
         {
-          code: 'export * from "./other"; export const foo = 1',
+          code: 'export const foo = 1; export const bar = 2',
           errors: [{ messageId: 'multipleExports' }]
         },
 

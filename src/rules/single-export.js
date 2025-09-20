@@ -71,16 +71,18 @@ const rule = {
 
       ExportNamedDeclaration(node) {
         if (node.declaration || (node.specifiers && node.specifiers.length > 0)) {
-          exportCount++
-          exportNodes.push(node)
-          checkMixedExports(node, false)
+          // Only count local exports, not re-exports
+          if (!node.source) {
+            exportCount++
+            exportNodes.push(node)
+            checkMixedExports(node, false)
+          }
         }
       },
 
-      ExportAllDeclaration(node) {
-        exportCount++
-        exportNodes.push(node)
-        checkMixedExports(node, false)
+      ExportAllDeclaration(_node) {
+        // ExportAllDeclaration always has a source, so it's always a re-export
+        // Don't count re-exports toward the export limit
       },
 
       AssignmentExpression(node) {
