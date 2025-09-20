@@ -6,11 +6,13 @@
     "requireBranch": "main"
   },
   "npm": {
-    "publish": true
+    "publish": true,
+    "token": "${NPM_TOKEN}"
   },
   "github": {
     "release": true,
-    "releaseName": "Release ${version}"
+    "releaseName": "Release ${version}",
+    "token": "${GITHUB_TOKEN}"
   },
   "hooks": {
     "before:init": ["pnpm test"]
