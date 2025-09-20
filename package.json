@@ -1,0 +1,44 @@
+{
+  "name": "eslint-plugin-single-export",
+  "version": "1.0.0",
+  "description": "ESLint plugin to enforce a single export per file",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "export",
+    "single-export",
+    "module"
+  ],
+  "author": "tupe12334",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "lint": "eslint src",
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "release-it": "^17.0.0",
+    "vitest": "^1.2.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tupe12334/eslint-plugin-single-export.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tupe12334/eslint-plugin-single-export/issues"
+  },
+  "homepage": "https://github.com/tupe12334/eslint-plugin-single-export#readme"
+}
